@@ -1,0 +1,24 @@
+<table class="table">
+<thead><%= @plan.company_name %></thead>
+<tbody>
+<% @coms.each do |c| %>
+<tr>
+<th>-></th>
+<td><%= Customer.find_by_client_id(c.customer_id) %> </td>
+<td><%= c.desc %></td>
+</tr>
+<% end %>
+<%= form_for @comment do |f| %>
+<tr>
+<th>-></th>
+<td><%= f.text_field :customer_id %></td>
+<td><%= f.text_area :desc %></td>
+</tr>
+<tr>
+<td><%= f.submit class:"btn btn-primary btn-md" %></td>
+<td></td>
+</tr>
+<% end %>
+
+</tbody>
+</table>

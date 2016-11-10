@@ -1,0 +1,30 @@
+<h2></h2>
+<table class = "table">
+   
+
+  
+   
+   <tbody>
+    <tr>
+         <th>customer No :</td>
+         <td><%= @customer.client_id %></td>
+    </tr>
+    <tr>
+         <th>Customer Name :</th>
+         <td><%=  @customer.cname %></td>
+    </tr>
+	<tr>
+         <th>Contact No :</th>
+         <td><%= @customer.contact %></td>
+    </tr>
+	<tr>
+         <th>Email :</th>
+         <td><%=  @customer.email %></td>
+    </tr>
+	
+
+   </tbody>
+	
+</table>
+<%= link_to "Index",customers_path, class:"btn btn-primary btn-md"%>
+<br><br><br>
